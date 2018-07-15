@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Magic_8_Ball" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball1" translatesAutoresizingMaskIntoConstraints="NO" id="1QU-w8-4Sk">
+                                <rect key="frame" x="87" y="114" width="146" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="146" id="46N-6f-Dke"/>
+                                    <constraint firstAttribute="height" constant="128" id="RAD-5E-WCk"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qzc-nw-uTO">
+                                <rect key="frame" x="0.0" y="358" width="320" height="47"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="Cxv-uZ-QaC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
+                                <state key="normal" title="Grill Me!">
+                                    <color key="titleColor" red="0.15686274510000001" green="0.69061957470000002" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="askButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AZv-QX-Aan"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask me anything!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQk-Iq-Kkl">
+                                <rect key="frame" x="83" y="59" width="154" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="wFU-Bl-w3j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.15686274509803921" green="0.69061957465277779" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1QU-w8-4Sk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9b5-V4-upA"/>
+                            <constraint firstItem="Qzc-nw-uTO" firstAttribute="top" secondItem="1QU-w8-4Sk" secondAttribute="bottom" priority="750" constant="16" id="EEN-zd-7XA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Qzc-nw-uTO" secondAttribute="bottom" multiplier="4:3" constant="-60" id="LZe-XJ-k2Q"/>
+                            <constraint firstItem="1QU-w8-4Sk" firstAttribute="top" secondItem="fQk-Iq-Kkl" secondAttribute="bottom" constant="31" id="MlI-kh-czg"/>
+                            <constraint firstItem="fQk-Iq-Kkl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="39" id="bFd-4l-2bD"/>
+                            <constraint firstItem="fQk-Iq-Kkl" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="c0W-hZ-xKn"/>
+                            <constraint firstItem="Qzc-nw-uTO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jru-iE-k5U"/>
+                            <constraint firstItem="Qzc-nw-uTO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="o4j-SL-GkC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="magic8BallImage" destination="1QU-w8-4Sk" id="Yka-oZ-Ipz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.43661971830986" y="106.875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ball1" width="460" height="412"/>
+    </resources>
+</document>
